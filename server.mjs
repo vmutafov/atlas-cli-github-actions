@@ -16,6 +16,7 @@ app.get('/', (_, res) => res.send('Books API v1.0'));
 
 app.post('/books', async (req, res) => {
     const { title, author } = req.body;
+    
     if (!title || !author) {
         return res.status(400).send('Invalid parameters. Please provide title and author.');
     }
